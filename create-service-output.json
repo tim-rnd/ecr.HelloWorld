@@ -1,0 +1,82 @@
+{
+    "service": {
+        "serviceArn": "arn:aws:ecs:us-west-2:479788010133:service/edudate-cluster/edudate-service",
+        "serviceName": "edudate-service",
+        "clusterArn": "arn:aws:ecs:us-west-2:479788010133:cluster/edudate-cluster",
+        "loadBalancers": [],
+        "serviceRegistries": [],
+        "status": "ACTIVE",
+        "desiredCount": 1,
+        "runningCount": 0,
+        "pendingCount": 0,
+        "launchType": "FARGATE",
+        "platformVersion": "LATEST",
+        "platformFamily": "Linux",
+        "taskDefinition": "arn:aws:ecs:us-west-2:479788010133:task-definition/edudate-task-def:26",
+        "deploymentConfiguration": {
+            "deploymentCircuitBreaker": {
+                "enable": false,
+                "rollback": false
+            },
+            "maximumPercent": 200,
+            "minimumHealthyPercent": 100
+        },
+        "deployments": [
+            {
+                "id": "ecs-svc/6208475485645647968",
+                "status": "PRIMARY",
+                "taskDefinition": "arn:aws:ecs:us-west-2:479788010133:task-definition/edudate-task-def:26",
+                "desiredCount": 1,
+                "pendingCount": 0,
+                "runningCount": 0,
+                "failedTasks": 0,
+                "createdAt": "2023-11-27T16:16:31.445000-08:00",
+                "updatedAt": "2023-11-27T16:16:31.445000-08:00",
+                "launchType": "FARGATE",
+                "platformVersion": "1.4.0",
+                "platformFamily": "Linux",
+                "networkConfiguration": {
+                    "awsvpcConfiguration": {
+                        "subnets": [
+                            "subnet-04bc28e9ea252e8bd",
+                            "subnet-0964f26ad06c941fe",
+                            "subnet-07083386352c4f1ca"
+                        ],
+                        "securityGroups": [
+                            "sg-0dbd0147ccf27435e"
+                        ],
+                        "assignPublicIp": "ENABLED"
+                    }
+                },
+                "rolloutState": "IN_PROGRESS",
+                "rolloutStateReason": "ECS deployment ecs-svc/6208475485645647968 in progress."
+            }
+        ],
+        "roleArn": "arn:aws:iam::479788010133:role/aws-service-role/ecs.amazonaws.com/AWSServiceRoleForECS",
+        "events": [],
+        "createdAt": "2023-11-27T16:16:31.445000-08:00",
+        "placementConstraints": [],
+        "placementStrategy": [],
+        "networkConfiguration": {
+            "awsvpcConfiguration": {
+                "subnets": [
+                    "subnet-04bc28e9ea252e8bd",
+                    "subnet-0964f26ad06c941fe",
+                    "subnet-07083386352c4f1ca"
+                ],
+                "securityGroups": [
+                    "sg-0dbd0147ccf27435e"
+                ],
+                "assignPublicIp": "ENABLED"
+            }
+        },
+        "schedulingStrategy": "REPLICA",
+        "deploymentController": {
+            "type": "ECS"
+        },
+        "createdBy": "arn:aws:iam::479788010133:user/timyshark",
+        "enableECSManagedTags": false,
+        "propagateTags": "NONE",
+        "enableExecuteCommand": false
+    }
+}
