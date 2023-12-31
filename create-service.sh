@@ -1,1 +1,1 @@
-./hahlabs-mysql-create-service.sh
+./hahlabs-create-service.sh

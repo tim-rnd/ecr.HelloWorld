@@ -1,0 +1,25 @@
+{
+    "clusters": [
+        {
+            "clusterArn": "arn:aws:ecs:us-west-2:479788010133:cluster/hahlabs-cluster",
+            "clusterName": "hahlabs-cluster",
+            "status": "ACTIVE",
+            "registeredContainerInstancesCount": 0,
+            "runningTasksCount": 1,
+            "pendingTasksCount": 0,
+            "activeServicesCount": 1,
+            "statistics": [],
+            "tags": [],
+            "settings": [],
+            "capacityProviders": [
+                "FARGATE",
+                "FARGATE_SPOT"
+            ],
+            "defaultCapacityProviderStrategy": [],
+            "serviceConnectDefaults": {
+                "namespace": "arn:aws:servicediscovery:us-west-2:479788010133:namespace/ns-jdydjllkjibf5vpy"
+            }
+        }
+    ],
+    "failures": []
+}

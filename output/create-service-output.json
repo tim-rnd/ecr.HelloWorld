@@ -1,7 +1,7 @@
 {
     "service": {
-        "serviceArn": "arn:aws:ecs:us-west-2:479788010133:service/hahlabs-cluster/hahlabs-mysql-service",
-        "serviceName": "hahlabs-mysql-service",
+        "serviceArn": "arn:aws:ecs:us-west-2:479788010133:service/hahlabs-cluster/hahlabs-service",
+        "serviceName": "hahlabs-service",
         "clusterArn": "arn:aws:ecs:us-west-2:479788010133:cluster/hahlabs-cluster",
         "loadBalancers": [],
         "serviceRegistries": [],
@@ -12,7 +12,7 @@
         "launchType": "FARGATE",
         "platformVersion": "LATEST",
         "platformFamily": "Linux",
-        "taskDefinition": "arn:aws:ecs:us-west-2:479788010133:task-definition/hahlabs-mysql-task-def:12",
+        "taskDefinition": "arn:aws:ecs:us-west-2:479788010133:task-definition/hahlabs-task-def:2",
         "deploymentConfiguration": {
             "deploymentCircuitBreaker": {
                 "enable": false,
@@ -23,15 +23,15 @@
         },
         "deployments": [
             {
-                "id": "ecs-svc/9773878267904698109",
+                "id": "ecs-svc/5500925615884490392",
                 "status": "PRIMARY",
-                "taskDefinition": "arn:aws:ecs:us-west-2:479788010133:task-definition/hahlabs-mysql-task-def:12",
+                "taskDefinition": "arn:aws:ecs:us-west-2:479788010133:task-definition/hahlabs-task-def:2",
                 "desiredCount": 1,
                 "pendingCount": 0,
                 "runningCount": 0,
                 "failedTasks": 0,
-                "createdAt": "2023-12-31T05:45:47.014000+00:00",
-                "updatedAt": "2023-12-31T05:45:47.014000+00:00",
+                "createdAt": "2023-12-31T22:59:32.640000+00:00",
+                "updatedAt": "2023-12-31T22:59:32.640000+00:00",
                 "launchType": "FARGATE",
                 "platformVersion": "1.4.0",
                 "platformFamily": "Linux",
@@ -49,12 +49,12 @@
                     }
                 },
                 "rolloutState": "IN_PROGRESS",
-                "rolloutStateReason": "ECS deployment ecs-svc/9773878267904698109 in progress."
+                "rolloutStateReason": "ECS deployment ecs-svc/5500925615884490392 in progress."
             }
         ],
         "roleArn": "arn:aws:iam::479788010133:role/aws-service-role/ecs.amazonaws.com/AWSServiceRoleForECS",
         "events": [],
-        "createdAt": "2023-12-31T05:45:47.014000+00:00",
+        "createdAt": "2023-12-31T22:59:32.640000+00:00",
         "placementConstraints": [],
         "placementStrategy": [],
         "networkConfiguration": {
@@ -77,6 +77,6 @@
         "createdBy": "arn:aws:iam::479788010133:user/timyshark",
         "enableECSManagedTags": false,
         "propagateTags": "NONE",
-        "enableExecuteCommand": false
+        "enableExecuteCommand": true
     }
 }
