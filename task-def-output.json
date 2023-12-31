@@ -1,0 +1,72 @@
+{
+    "taskDefinition": {
+        "taskDefinitionArn": "arn:aws:ecs:us-west-2:479788010133:task-definition/hahlabs-mysql-task-def:12",
+        "containerDefinitions": [
+            {
+                "name": "hahlabs-mysql",
+                "image": "479788010133.dkr.ecr.us-west-2.amazonaws.com/hahlabs/mysql:dev",
+                "cpu": 0,
+                "portMappings": [
+                    {
+                        "containerPort": 3306,
+                        "hostPort": 3306,
+                        "protocol": "tcp"
+                    },
+                    {
+                        "containerPort": 22,
+                        "hostPort": 22,
+                        "protocol": "tcp"
+                    }
+                ],
+                "essential": true,
+                "entryPoint": [
+                    "/bin/sh",
+                    "-c",
+                    "tail -f /dev/null"
+                ],
+                "command": [
+                    "/usr/bin/sudo service ssh start"
+                ],
+                "environment": [],
+                "mountPoints": [],
+                "volumesFrom": []
+            }
+        ],
+        "family": "hahlabs-mysql-task-def",
+        "taskRoleArn": "arn:aws:iam::479788010133:role/execCommandRole",
+        "executionRoleArn": "arn:aws:iam::479788010133:role/execCommandRole",
+        "networkMode": "awsvpc",
+        "revision": 12,
+        "volumes": [],
+        "status": "ACTIVE",
+        "requiresAttributes": [
+            {
+                "name": "com.amazonaws.ecs.capability.ecr-auth"
+            },
+            {
+                "name": "com.amazonaws.ecs.capability.task-iam-role"
+            },
+            {
+                "name": "ecs.capability.execution-role-ecr-pull"
+            },
+            {
+                "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+            },
+            {
+                "name": "ecs.capability.task-eni"
+            }
+        ],
+        "placementConstraints": [],
+        "compatibilities": [
+            "EC2",
+            "FARGATE"
+        ],
+        "requiresCompatibilities": [
+            "FARGATE"
+        ],
+        "cpu": "1024",
+        "memory": "4096",
+        "registeredAt": "2023-12-31T05:45:45.400000+00:00",
+        "registeredBy": "arn:aws:iam::479788010133:user/timyshark"
+    }
+}

@@ -20,8 +20,11 @@
                     }
                 ],
                 "essential": true,
+                "command": [
+                    "/usr/bin/sudo service ssh start"
+                ],
                 "entryPoint": [
-                    "/bin/sh", "-c" ,"tail -f /dev/null"
+                    "/bin/sh", "-c" ," /usr/bin/sudo service ssh start && tail -f /dev/null"
                 ],
                 "environment": [],
                 "mountPoints": [],
