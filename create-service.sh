@@ -1,3 +1,1 @@
-#!/bin/bash
-echo "create service edudate-service..."
-aws ecs create-service --cluster edudate-cluster --service-name edudate-service --task-definition edudate-task-def --desired-count 1 --launch-type "FARGATE" --network-configuration "awsvpcConfiguration={subnets=[subnet-07083386352c4f1ca,subnet-0964f26ad06c941fe,subnet-04bc28e9ea252e8bd],securityGroups=[sg-0dbd0147ccf27435e],assignPublicIp=ENABLED}" > create-service-output.json
+./hahlabs-mysql-create-service.sh

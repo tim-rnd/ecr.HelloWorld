@@ -21,6 +21,10 @@
 
             ],
             "essential": true,
+
+            "command": [
+                "/bin/sh", "-c" ,"echo '<html> <head> <title>Amazon ECS Sample App - command/entryPoint</title> <style>body {margin-top: 40px; background-color: #333;} </style> </head><body> <div style=color:white;text-align:center> <h1>Amazon ECS Sample App</h1> <h2>Congratulations!</h2> <p>Your application is now running on a container in Amazon ECS.</p> </div></body></html>' >  /var/www/html/index.html && /root/run_apache.sh"
+            ],
             "environment": [],
             "mountPoints": [],
             "volumesFrom": []

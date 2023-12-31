@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM 479788010133.dkr.ecr.us-west-2.amazonaws.com/hahlabs/mysql:dev
 LABEL version.angular="14-lts" \
       version.ubuntu="22.04-lts" \
       version.firebase="9.1.0" \

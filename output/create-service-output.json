@@ -1,8 +1,8 @@
 {
     "service": {
-        "serviceArn": "arn:aws:ecs:us-west-2:479788010133:service/edudate-cluster/edudate-service",
-        "serviceName": "edudate-service",
-        "clusterArn": "arn:aws:ecs:us-west-2:479788010133:cluster/edudate-cluster",
+        "serviceArn": "arn:aws:ecs:us-west-2:479788010133:service/hahlabs-cluster/hahlabs-mysql-service",
+        "serviceName": "hahlabs-mysql-service",
+        "clusterArn": "arn:aws:ecs:us-west-2:479788010133:cluster/hahlabs-cluster",
         "loadBalancers": [],
         "serviceRegistries": [],
         "status": "ACTIVE",
@@ -12,7 +12,7 @@
         "launchType": "FARGATE",
         "platformVersion": "LATEST",
         "platformFamily": "Linux",
-        "taskDefinition": "arn:aws:ecs:us-west-2:479788010133:task-definition/edudate-task-def:26",
+        "taskDefinition": "arn:aws:ecs:us-west-2:479788010133:task-definition/hahlabs-mysql-task-def:7",
         "deploymentConfiguration": {
             "deploymentCircuitBreaker": {
                 "enable": false,
@@ -23,49 +23,49 @@
         },
         "deployments": [
             {
-                "id": "ecs-svc/6208475485645647968",
+                "id": "ecs-svc/4451068512863747825",
                 "status": "PRIMARY",
-                "taskDefinition": "arn:aws:ecs:us-west-2:479788010133:task-definition/edudate-task-def:26",
+                "taskDefinition": "arn:aws:ecs:us-west-2:479788010133:task-definition/hahlabs-mysql-task-def:7",
                 "desiredCount": 1,
                 "pendingCount": 0,
                 "runningCount": 0,
                 "failedTasks": 0,
-                "createdAt": "2023-11-27T16:16:31.445000-08:00",
-                "updatedAt": "2023-11-27T16:16:31.445000-08:00",
+                "createdAt": "2023-12-31T02:22:06.717000+00:00",
+                "updatedAt": "2023-12-31T02:22:06.717000+00:00",
                 "launchType": "FARGATE",
                 "platformVersion": "1.4.0",
                 "platformFamily": "Linux",
                 "networkConfiguration": {
                     "awsvpcConfiguration": {
                         "subnets": [
-                            "subnet-04bc28e9ea252e8bd",
-                            "subnet-0964f26ad06c941fe",
-                            "subnet-07083386352c4f1ca"
+                            "subnet-0289e8562c95a0480",
+                            "subnet-0234b0ed328ffe600",
+                            "subnet-00dad856ad1e4bb71"
                         ],
                         "securityGroups": [
-                            "sg-0dbd0147ccf27435e"
+                            "sg-02d3bc0d395714d21"
                         ],
                         "assignPublicIp": "ENABLED"
                     }
                 },
                 "rolloutState": "IN_PROGRESS",
-                "rolloutStateReason": "ECS deployment ecs-svc/6208475485645647968 in progress."
+                "rolloutStateReason": "ECS deployment ecs-svc/4451068512863747825 in progress."
             }
         ],
         "roleArn": "arn:aws:iam::479788010133:role/aws-service-role/ecs.amazonaws.com/AWSServiceRoleForECS",
         "events": [],
-        "createdAt": "2023-11-27T16:16:31.445000-08:00",
+        "createdAt": "2023-12-31T02:22:06.717000+00:00",
         "placementConstraints": [],
         "placementStrategy": [],
         "networkConfiguration": {
             "awsvpcConfiguration": {
                 "subnets": [
-                    "subnet-04bc28e9ea252e8bd",
-                    "subnet-0964f26ad06c941fe",
-                    "subnet-07083386352c4f1ca"
+                    "subnet-0289e8562c95a0480",
+                    "subnet-0234b0ed328ffe600",
+                    "subnet-00dad856ad1e4bb71"
                 ],
                 "securityGroups": [
-                    "sg-0dbd0147ccf27435e"
+                    "sg-02d3bc0d395714d21"
                 ],
                 "assignPublicIp": "ENABLED"
             }

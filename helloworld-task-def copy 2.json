@@ -21,6 +21,9 @@
 
             ],
             "essential": true,
+            "entryPoint": [
+                "/bin/sh", "-c","/root/run_apache.sh"
+            ],
             "environment": [],
             "mountPoints": [],
             "volumesFrom": []
