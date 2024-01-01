@@ -7,7 +7,7 @@
 
 ln -sf ./$1-task-def.json task-def.json
 ln -sf ./$1-create-service.sh create-service.sh
-
+./import-docker-image.sh
 
 ./create-task-def.sh
 # Check the exit status of the cp command

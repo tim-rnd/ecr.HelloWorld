@@ -1,6 +1,6 @@
 {
     "taskDefinition": {
-        "taskDefinitionArn": "arn:aws:ecs:us-west-2:479788010133:task-definition/hahlabs-task-def:2",
+        "taskDefinitionArn": "arn:aws:ecs:us-west-2:479788010133:task-definition/hahlabs-task-def:7",
         "containerDefinitions": [
             {
                 "name": "hahlabs-mysql",
@@ -75,13 +75,50 @@
                         "awslogs-stream-prefix": "hahlabs-laravel"
                     }
                 }
+            },
+            {
+                "name": "hahlabs-angular",
+                "image": "479788010133.dkr.ecr.us-west-2.amazonaws.com/hahlabs/angular:dev",
+                "cpu": 0,
+                "portMappings": [
+                    {
+                        "containerPort": 8101,
+                        "hostPort": 8101,
+                        "protocol": "tcp"
+                    },
+                    {
+                        "containerPort": 8122,
+                        "hostPort": 8122,
+                        "protocol": "tcp"
+                    }
+                ],
+                "essential": true,
+                "entryPoint": [
+                    "/bin/sh",
+                    "-c",
+                    "/usr/bin/sudo ./startup.sh && tail -f /dev/null"
+                ],
+                "environment": [],
+                "mountPoints": [],
+                "volumesFrom": [],
+                "linuxParameters": {
+                    "initProcessEnabled": true
+                },
+                "logConfiguration": {
+                    "logDriver": "awslogs",
+                    "options": {
+                        "awslogs-group": "/timy-rnd/ecs/hahlabs",
+                        "awslogs-region": "us-west-2",
+                        "awslogs-stream-prefix": "hahlabs-angular"
+                    }
+                }
             }
         ],
         "family": "hahlabs-task-def",
         "taskRoleArn": "arn:aws:iam::479788010133:role/ecsTaskRole",
         "executionRoleArn": "arn:aws:iam::479788010133:role/ecsTaskExecutionRole",
         "networkMode": "awsvpc",
-        "revision": 2,
+        "revision": 7,
         "volumes": [],
         "status": "ACTIVE",
         "requiresAttributes": [
@@ -123,7 +160,7 @@
         ],
         "cpu": "1024",
         "memory": "4096",
-        "registeredAt": "2023-12-31T22:59:31.172000+00:00",
+        "registeredAt": "2024-01-01T10:39:23.896000+00:00",
         "registeredBy": "arn:aws:iam::479788010133:user/timyshark"
     }
 }

@@ -71,6 +71,40 @@
                 "environment": [],
                 "mountPoints": [],
                 "volumesFrom": []
+            },
+            {
+                "name": "hahlabs-angular",
+                "image": "479788010133.dkr.ecr.us-west-2.amazonaws.com/hahlabs/angular:dev",
+                "linuxParameters": { 
+                    "initProcessEnabled": true 
+                },
+                "logConfiguration": {
+                    "logDriver": "awslogs",
+                        "options": {
+                           "awslogs-group": "/timy-rnd/ecs/hahlabs",
+                           "awslogs-region": "us-west-2",
+                           "awslogs-stream-prefix": "hahlabs-angular"
+                        }
+                },
+                "portMappings": [
+                    {
+                        "containerPort": 8101,
+                        "hostPort": 8101,
+                        "protocol": "tcp"
+                    },
+                    {
+                        "containerPort": 8122,
+                        "hostPort": 8122,
+                        "protocol": "tcp"
+                    }
+                ],
+                "essential": true,
+                "entryPoint": [
+                    "/bin/sh", "-c" ,"/usr/bin/sudo ./startup.sh && tail -f /dev/null"
+                ],
+                "environment": [],
+                "mountPoints": [],
+                "volumesFrom": []
             }
         ],
         "requiresCompatibilities": [
